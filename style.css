@@ -1,5 +1,42 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+  --color-dark: rgb(38, 11, 1);
+  --color-light: rgb(147, 102, 58);
+  --color-lighter: rgb(224, 179, 145);
+  --text-color: rgb(86, 32, 5);
+  --text-color-light: rgb(233, 195, 157);
+}
+
+* ::after,
+::before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.logo__container img {
+  display: block;
+  width: 13%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.logo {
+  animation-duration: 2.5s;
+  animation-name: spin;
+  animation-iteration-count: 1;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.toplinks {
+  display: none;
 }
