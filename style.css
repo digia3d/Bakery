@@ -15,10 +15,17 @@
 }
 
 .logo__container img {
-  display: block;
-  width: 13%;
-  margin-left: 5px;
-  margin-right: 5px;
+  display: none;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .logo {
@@ -27,16 +34,137 @@
   animation-iteration-count: 1;
 }
 
-@keyframes spin {
-  from {
-    transform: rotate(0);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+.logomenu {
+  display: flex;
+  flex-direction: row;
 }
 
 .toplinks {
   display: none;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+.list li ul {
+  position: absolute;
+  display: none;
+}
+
+.list li:hover ul {
+  display: block;
+}
+
+li {
+  list-style-type: none;
+  list-style-position: inside;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  background-color: #f2e8e8cc;
+}
+
+.hamburger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  color: var(--text-darkgray);
+  margin: 10px;
+}
+
+i .fa-solid {
+  display: inline-block;
+  opacity: 1;
+  margin: 0 25rem 0 0;
+  width: 1.18em;
+  height: 1em;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: inherit;
+  text-align: center;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+i .fa-solid::before {
+  background: 0 0 !important;
+}
+
+.list.active {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  color: var(--color-white);
+  background: var(--color-dark);
+  z-index: 20;
+}
+
+.list.active .menu-closebtn {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  padding: 10px;
+  text-align: right;
+}
+
+.navmenu {
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (min-width: 768px) {
+  .toplinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding-right: 10px;
+    gap: 10px;
+    background-color: var(--color-dark);
+  }
+
+  .navlinks {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-light);
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .logo__container img {
+    display: block;
+    width: 6%;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-right: 10%;
+    gap: 100px;
+  }
 }
