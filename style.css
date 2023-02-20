@@ -32,6 +32,7 @@
   animation-duration: 2.5s;
   animation-name: spin;
   animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .logomenu {
@@ -46,7 +47,6 @@
 .list {
   display: flex;
   flex-direction: column;
-  position: fixed;
   top: 0;
   left: 0;
   margin: 0;
@@ -63,7 +63,6 @@
 
 li {
   list-style-type: none;
-  list-style-position: inside;
 }
 
 .navbar {
@@ -151,7 +150,7 @@ i .fa-solid::before {
 
   .logo__container img {
     display: block;
-    width: 6%;
+    width: 10%;
     margin-left: 5px;
     margin-right: 5px;
   }
@@ -163,8 +162,53 @@ i .fa-solid::before {
   .list {
     display: flex;
     flex-direction: row;
+    list-style-type: none;
+    justify-content: flex-end;
+    margin-top: 10px;
+    align-items: center;
+  }
+
+  .item {
+    margin-right: 100px;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav li {
+    display: inline-block;
     position: relative;
-    margin-right: 10%;
-    gap: 100px;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px;
+    color: #faf8f8;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-light);
+    padding: 0;
+  }
+
+  nav ul ul li {
+    display: block;
+  }
+
+  nav li:hover > ul {
+    display: inherit;
+  }
+
+  nav ul ul li:hover > ul {
+    display: inherit;
   }
 }
