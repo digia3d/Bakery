@@ -3,6 +3,7 @@
 :root {
   --color-dark: rgb(38, 11, 1);
   --color-light: rgb(147, 102, 58);
+  --color-ligh-transparent: rgba(147, 102, 58, 0.459);
   --color-lighter: rgb(224, 179, 145);
   --text-color: rgb(86, 32, 5);
   --text-color-light: rgb(233, 195, 157);
@@ -45,7 +46,7 @@
 }
 
 .list {
-  display: flex;
+  display: none;
   flex-direction: column;
   top: 0;
   left: 0;
@@ -127,6 +128,56 @@ i .fa-solid::before {
   flex-direction: row;
 }
 
+.pastry__picture {
+  background-position: center;
+}
+
+.pastry__picture::before {
+  content: "";
+  background-image: url(images/bread-1465190_1920.png);
+  background-repeat: no-repeat;
+  background-color: var(--color-light);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+
+.home__bakery {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  text-align: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  padding: 2px;
+  margin-top: 10rem;
+}
+
+.cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+  padding-right: 10px;
+  gap: 10px;
+  color: white;
+  padding-top: 0.6rem;
+}
+
+hr {
+  background-color: var(--color-dark);
+  width: 30%;
+  height: 1px;
+  border: none;
+}
+
 @media only screen and (min-width: 768px) {
   .toplinks {
     display: flex;
@@ -136,14 +187,14 @@ i .fa-solid::before {
     list-style-type: none;
     margin: 0;
     padding-right: 10px;
-    gap: 10px;
+    gap: 15px;
     background-color: var(--color-dark);
   }
 
   .navlinks {
     display: flex;
     flex-direction: row;
-    background-color: var(--color-light);
+    background-color: var(--color-ligh-transparent);
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -168,8 +219,9 @@ i .fa-solid::before {
     align-items: center;
   }
 
-  .item {
-    margin-right: 100px;
+  .item,
+  .btn__item {
+    margin-right: 50px;
   }
 
   nav ul {

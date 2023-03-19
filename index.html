@@ -1,66 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <link href="http://fonts.cdnfonts.com/css/cocogoose?styles=44178" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/1bb5d15b47.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-  <link rel="stylesheet" href="style.css">
-  <title>K90.0</title>
-</head>
-<body class="mainbody homepage">
-  <header class="header">
-    <ul class="toplinks">
-      <li class="sociallinks">
-        <a href="https://twitter.com/K900Bakery"><i class="twitter icon"></i></a>
-        <a href="https://www.facebook.com/K900Bakery/"><i class="facebook icon"></i></a>
-        <a href="https://www.instagram.com/k900bakery/"><i class="instagram icon"></i></a>
-      </li>
-      <li class="toplink"><a href="#">Register</a></li>
-      <li class="toplink"><a href="#">K900 Klub</a></li>
-      <li class="toplink"><a href="#">Online Naručivanje</a></li>
-      <li class="toplink"><a href="#">Blog</a></li>
-      <a class="btn__link" href="tel:+381621039107">
-        <div class="btn__container">
-          Call Us
-        </div>
-      </a>
-    </ul>
-
-    <nav class="navlinks">
-      <div class="logomenu">
-        <div class="logo__container">
-          <a href="index.html">
-            <img class="logo" src="images/K900_logo.png" alt="K900 Bakery Logo">
-          </a>
-        </div>
-        <nav class="hamburger">
-          <i class="fa-solid fa-bars"></i>
-        </nav>
-      
-
-      <ul class="list">
-        <li class="menu-closebtn"><i class="times item"></i></li>
-        <li><a class="item home active" href="index.html">Home</a></li>
-        <li>
-          <a class="item" href="menu.html" style="white-space: nowrap;">Our Menu</a>
-          <ul>
-            <li><a class="item" href="#pizza">Pizza</a></li>
-            <li><a class="item" href="#barbecue">Barbecue</a></li>
-            <li><a class="item" href="#bakery">Bakery</a></li>
-          </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, width=device-width, initial-scale=1.0"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link
+      href="https://fonts.cdnfonts.com/css/cocogoose?styles=44178"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/1bb5d15b47.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>K90.0</title>
+  </head>
+  <body class="mainbody homepage">
+    <header class="header">
+      <ul class="toplinks">
+        <li class="sociallinks">
+          <a href="https://twitter.com/K900Bakery"
+            ><i class="twitter icon"></i
+          ></a>
+          <a href="https://www.facebook.com/K900Bakery/"
+            ><i class="facebook icon"></i
+          ></a>
+          <a href="https://www.instagram.com/k900bakery/"
+            ><i class="instagram icon"></i
+          ></a>
         </li>
+        <li class="toplink"><a href="#">Register</a></li>
+        <li class="toplink"><a href="#">K900 Klub</a></li>
+        <li class="toplink"><a href="#">Online Naručivanje</a></li>
+        <li class="toplink"><a href="#">Blog</a></li>
       </ul>
-    </div>
-    </nav>
-  </header>
 
-  <section class="pastry__picture">
-    
-  </section>
-</body>
+      <nav class="navlinks">
+        <div class="logomenu">
+          <div class="logo__container">
+            <a href="index.html">
+              <img
+                class="logo"
+                src="images/K900_logo.png"
+                alt="K900 Bakery Logo"
+              />
+            </a>
+          </div>
+          <nav class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+          </nav>
+
+          <ul class="list">
+            <li class="menu-closebtn"><i class="times item"></i></li>
+            <a
+              class="btn__item"
+              href="tel:+381621039107"
+              style="white-space: nowrap;"
+            >
+              <div class="btn__item" style="white-space: nowrap;">
+                Call Us
+              </div>
+            </a>
+            <li><a class="item home active" href="index.html">Home</a></li>
+            <li>
+              <a class="item" href="menu.html" style="white-space: nowrap;"
+                >Our Menu</a
+              >
+              <ul>
+                <li><a class="item" href="#pizza">Pizza</a></li>
+                <li><a class="item" href="#barbecue">Barbecue</a></li>
+                <li><a class="item" href="#bakery">Bakery</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div id="cartAmount" class="cartAmount">0</div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="pastry__picture">
+      <div class="home__bakery">
+        <h1>GLUTEN FREE FAST FOOD AND BAKERY</h1>
+        <p>COMPLETE KITCHEN WITHOUT GLUTEN</p>
+        <hr />
+      </div>
+    </section>
+  </body>
 </html>
