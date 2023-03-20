@@ -239,3 +239,15 @@ i .fa-solid::before {
   font-style: italic;
   margin-top: 3rem;
 }
+
+.find__us p {
+  font-size: 1rem;
+  color: #f4f2f1;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  max-width: 20rem;
+}
+
+strong {
+  color: #f4f2f1;
+}
