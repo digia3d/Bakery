@@ -1,8 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400&display=swap');
 
 :root {
   --color-dark: rgb(38, 11, 1);
+  --color-nav-dark: rgba(43, 15, 6, 0.513);
   --color-light: rgb(147, 102, 58);
+  --color-ligh-transparent: rgba(147, 102, 58, 0.459);
   --color-lighter: rgb(224, 179, 145);
   --text-color: rgb(86, 32, 5);
   --text-color-light: rgb(233, 195, 157);
@@ -14,8 +16,18 @@
   box-sizing: inherit;
 }
 
+body {
+  background-color: var(--color-light);
+}
+
+.logo__container {
+  display: flex;
+  padding: 10px;
+}
+
 .logo__container img {
-  display: none;
+  display: flex;
+  width: 20%;
 }
 
 @keyframes spin {
@@ -35,17 +47,12 @@
   animation-fill-mode: forwards;
 }
 
-.logomenu {
-  display: flex;
-  flex-direction: row;
-}
-
 .toplinks {
   display: none;
 }
 
 .list {
-  display: flex;
+  display: none;
   flex-direction: column;
   top: 0;
   left: 0;
@@ -65,10 +72,10 @@ li {
   list-style-type: none;
 }
 
-.navbar {
+.logomenu {
   display: flex;
   flex-direction: row;
-  background-color: #f2e8e8cc;
+  background-color: var(--color-light);
 }
 
 .hamburger {
@@ -78,6 +85,7 @@ li {
   font-size: 30px;
   color: var(--text-darkgray);
   margin: 10px;
+  cursor: pointer;
 }
 
 i .fa-solid {
@@ -120,6 +128,23 @@ i .fa-solid::before {
   width: 100%;
   padding: 10px;
   text-align: right;
+  color: #f1f1f1;
+}
+
+i .icon {
+  display: inline-block;
+  opacity: 1;
+  margin: 0 25rem 0 0;
+  width: 1.18em;
+  height: 1em;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: inherit;
+  text-align: center;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .navmenu {
@@ -127,88 +152,119 @@ i .fa-solid::before {
   flex-direction: row;
 }
 
-@media only screen and (min-width: 768px) {
-  .toplinks {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    list-style-type: none;
-    margin: 0;
-    padding-right: 10px;
-    gap: 10px;
-    background-color: var(--color-dark);
-  }
+.pastry__picture {
+  content: "";
+  background-image: url(images/bread-1465190_1920.png);
+  background-repeat: no-repeat;
+  background-color: var(--color-light);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: -3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
-  .navlinks {
-    display: flex;
-    flex-direction: row;
-    background-color: var(--color-light);
-    padding-left: 40px;
-    padding-right: 40px;
-  }
+.pastry__text {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 70%;
+  padding: 20px;
+  text-align: center;
+}
 
-  .logo__container img {
-    display: block;
-    width: 10%;
-    margin-left: 5px;
-    margin-right: 5px;
-  }
+.home__bakery {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  text-align: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  padding: 5px;
+}
 
-  .hamburger {
-    display: none;
-  }
+.home__bakery h1 {
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+  padding-top: 5rem;
+}
 
-  .list {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    justify-content: flex-end;
-    margin-top: 10px;
-    align-items: center;
-  }
+.cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+  padding-right: 10px;
+  gap: 10px;
+  color: white;
+  padding-top: 0.6rem;
+}
 
-  .item {
-    margin-right: 100px;
-  }
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  padding: 2px;
+  margin-top: 5rem;
+}
 
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+.description h2 {
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+  padding-top: 5rem;
+}
 
-  nav li {
-    display: inline-block;
-    position: relative;
-  }
+.description p,
+.home__bakery p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  max-width: 20rem;
+}
 
-  nav a {
-    display: block;
-    padding: 10px;
-    color: #faf8f8;
-    font-weight: bold;
-    text-decoration: none;
-  }
+.find__us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  padding: 2px;
+  background-color: var(--color-dark);
+}
 
-  nav ul ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: var(--color-light);
-    padding: 0;
-  }
+.find__us h2 {
+  font-size: 1.3rem;
+  color: #f4f2f1;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+  margin-top: 3rem;
+}
 
-  nav ul ul li {
-    display: block;
-  }
+.find__us p {
+  font-size: 1rem;
+  color: #f4f2f1;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  max-width: 20rem;
+}
 
-  nav li:hover > ul {
-    display: inherit;
-  }
-
-  nav ul ul li:hover > ul {
-    display: inherit;
-  }
+strong {
+  color: #f4f2f1;
 }
