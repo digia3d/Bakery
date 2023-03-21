@@ -128,6 +128,23 @@ i .fa-solid::before {
   width: 100%;
   padding: 10px;
   text-align: right;
+  color: #f1f1f1;
+}
+
+i .icon {
+  display: inline-block;
+  opacity: 1;
+  margin: 0 25rem 0 0;
+  width: 1.18em;
+  height: 1em;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: inherit;
+  text-align: center;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .navmenu {
