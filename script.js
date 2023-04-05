@@ -26,3 +26,21 @@ window.addEventListener('resize', () => {
     window.location.reload();
   }
 });
+
+$(document).ready(function () {
+  let interval = 3000; // set the interval time in milliseconds
+  const slides = $('.slide');
+  let currentIndex = 0;
+  const maxIndex = slides.length - 1;
+
+  function slide() {
+    slides.eq(currentIndex).fadeOut(500);
+    currentIndex ++;
+    if (currentIndex > maxIndex) {
+      currentIndex = 0;
+    }
+    slides.eq(currentIndex).fadeIn(500);
+  }
+
+  setInterval(slide, interval);
+});
