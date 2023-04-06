@@ -11,6 +11,7 @@
       src="https://kit.fontawesome.com/1bb5d15b47.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
@@ -49,6 +50,10 @@
               />
             </a>
           </div>
+          <div class="cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div id="cartAmount" class="cartAmount">0</div>
+          </div>
           <nav class="hamburger">
             <i class="fa-solid fa-bars"></i>
           </nav>
@@ -75,10 +80,6 @@
                 <li><a class="item" href="#bakery">Bakery</a></li>
               </ul>
             </li>
-            <div class="cart">
-              <i class="fa-solid fa-cart-shopping"></i>
-              <div id="cartAmount" class="cartAmount">0</div>
-            </div>
           </ul>
         </div>
       </nav>
@@ -101,18 +102,18 @@
     <section class="find__us">
       <div class="find__us__header">
         <h2>HOW TO GET OUR PRODUCTS</h2>
-        <p>Delivery to Belgrade Kalenić Market once a week guaranteed</p>
+        <p class=".find__us__p">Delivery to Belgrade Kalenić Market once a week guaranteed</p>
       </div>
       <div class="find__us__container">
         <div class="find__us__desc">
           <p class="menu__reminder">K900 BAKERY WITHOUT GLUTEN
             PASTRY AND BREAD / CATERING / BARBECUE / BAKING / SALADS / PIZZA / SANDWICHES AND MUCH MORE</p>
           <p class="orders">porudžbine telefonom</p>
-          <strong>17 - 20 h&nbsp;&nbsp;&nbsp;&nbsp;062 103 9 107</strong>
+          <strong>17 - 20 h&nbsp;&nbsp;&nbsp;&nbsp;061 648 3 485</strong>
           <p class="important__info">Important: All orders are arranged the day before</p>
-          <p>We offer a variety of homemade gluten-free specialties. Our mission and responsibility is primarily public education regarding celiac disease, where it is important to remember that it is a serious medical condition and that a strict gluten-free diet must be followed at all times.</p>
+          <p class="find__us__p">We offer a variety of homemade gluten-free specialties. Our mission and responsibility is primarily public education regarding celiac disease, where it is important to remember that it is a serious medical condition and that a strict gluten-free diet must be followed at all times.</p>
           <div class="find__us__social">
-            <p>Pratite nas ovde</p>
+            <p class="find__us__p">Pratite nas ovde</p>
             <a href="https://twitter.com/K900Bakery"
               ><i class="twitter icon"></i>
             </a>
@@ -132,7 +133,124 @@
         </div>
       </div>
     </section>
+    <section class="product">
+      <div class="product__header">
+        <p class="product__p">TRY OUR BREAD</p>
+        <h2>SUPER HOMEMADE</h2>
+        <p class="product__description">
+          Bread holds a social and emotional significance that extends beyond its function as a mere source of sustenance.
+          <br />
+          <br />
+          If you're someone who's enjoyed bread your whole life and suddenly discovered that bakers are off-limits, we feel your frustration. We are bread lovers of all kinds and sizes and we know how difficult it is at first to make gluten-free bread or a certain variation, type, and form of gluten-free bread.
+          <br
+          /><br
+          />
+          Fresh bread without gluten, lactose and additives is always available with us.
+        </p>
+      </div>
+      <div class="slider">
+        <div class="slide">
+          <img
+            src="images/hleb.jpg"
+            alt="Slide_1"
+            class="slide__img"
+          />
+          <button class="slide-button">Order here</button>
+        </div>
+        <div class="slide">
+          <img
+            src="images/sečen_hleb.jpg"
+            alt="Slide_2"
+            class="slide__img"
+          />
+          <button class="slide-button">Order here</button>
+        </div>
+        <div class="slide">
+          <img
+            src="images/baget_hleb.jpg"
+            alt="Slide_3"
+            class="slide__img"
+          />
+          <button class="slide-button">Order here</button>
+        </div>
+        <div class="slide">
+          <img
+            src="images/presek_bageta.jpg"
+            alt="Slide_4"
+            class="slide__img"
+          />
+          <button class="slide-button">Order here</button>
+        </div>
+        <div class="slide">
+          <img
+            src="images/somun.jpg"
+            alt="Slide_5"
+            class="slide__img"
+          />
+          <button class="slide-button">Order here</button>
+        </div>
+        <div class="slide">
+          <img
+            src="images/somun_2.jpg"
+            alt="Slide_6"
+            class="slide__img"
+          />
+          <button type="button" class="slide-button">Order here</button>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer__container">
+        <div class="footer__left">
+          <p class="footer__p">Bakery Gluten Free</p>
+          <p class="footer__p">Cara Dušana 60a,Pančevo 26101, Srbija</p>
+          <p class="footer__p">+381 61 648 3 485 / k900bakery@gmail.com</p>
+        </div>
+        <div class="footer__left__links">
+          <h3>Online Shopping</h3>
+          <a href="#">Fast Food</a>
+          <br/>
+          <a href="#">Online GF Store with delivery</a>
+          <br/>
+          <a href="#">Catering</a>
+          <br/>
+          <a href="#">Cakes and cookies</a>
+          <br/>
+          <a href="#">Products as desired and for every occasion</a>
+        </div>
+        <div class="footer__intouch">
+          <h3>Stay in touch</h3>
+          <p class="footer__p__intouch">Don't miss great recipes, stories from the gluten-free world or promotions from our online store.</p>
+          <strong class="footer__p__intouch">Enter your email</strong>
+          <form action="">
+            <input type="email" placeholder="Your email" />
+            <button type="button" class="footer__button">Add</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__wrapper">
+        <div class"footer__social">
+          <a href="https://twitter.com/K900Bakery"
+            ><i class="twitter icon"></i>
+          </a>
+          <a href="https://www.facebook.com/K900Bakery/"
+            ><i class="facebook icon"></i>
+          </a>
+          <a href="https://www.instagram.com/k900bakery/"
+            ><i class="instagram icon"></i>
+          </a>
+        </div>
+        <div class="footer__widget">
+          <img src="images/Platne-kartice.jpg" alt="Pay cards">
+        </div>
+      </div>
+      <a href="#" class="scroll-to-top" onclick="topFunction()">
+        <i class="fas fa-arrow-up"></i>
+      </a>
+      
+    </footer>
 
+    
     <script src="script.js"></script>
   </body>
 </html>

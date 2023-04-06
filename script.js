@@ -1,3 +1,5 @@
+/* global $ */
+
 const mainbody = document.querySelector('.mainbody');
 const menuList = document.querySelector('.list');
 const hamburger = document.querySelector('.hamburger');
@@ -26,3 +28,37 @@ window.addEventListener('resize', () => {
     window.location.reload();
   }
 });
+
+$(document).ready(() => {
+  const interval = 3000; // set the interval time in milliseconds
+  const slides = $('.slide');
+  let currentIndex = 0;
+  const maxIndex = slides.length - 1;
+
+  function slide() {
+    slides.eq(currentIndex).fadeOut(500);
+    currentIndex += 1;
+    if (currentIndex > maxIndex) {
+      currentIndex = 0;
+    }
+    slides.eq(currentIndex).fadeIn(500);
+  }
+
+  setInterval(slide, interval);
+});
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById('myTopBtn').style.display = 'block';
+  } else {
+    document.getElementById('myTopBtn').style.display = 'none';
+  }
+}
+
+window.onscroll = function () { scrollFunction(); };
+
+// eslint-disable-next-line no-unused-vars
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
