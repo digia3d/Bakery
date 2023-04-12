@@ -48,16 +48,18 @@ $(document).ready(() => {
 });
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById('myTopBtn').style.display = 'block';
-  } else {
-    document.getElementById('myTopBtn').style.display = 'none';
+  var myTopBtn = document.getElementById('myTopBtn');
+  if (myTopBtn !== null) {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      myTopBtn.style.display = 'block';
+    } else {
+      myTopBtn.style.display = 'none';
+    }
   }
 }
 
-window.onscroll = function () { scrollFunction(); };
+window.onscroll = function() { scrollFunction(); };
 
-// eslint-disable-next-line no-unused-vars
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
