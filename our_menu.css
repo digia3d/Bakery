@@ -1,0 +1,40 @@
+.products {
+  display: grid;
+}
+
+.pizzeria,
+.fast_food {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+#pizza {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: auto;
+}
+
+.picture-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  object-fit: cover;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  padding: 3px 10px;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
