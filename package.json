@@ -29,6 +29,7 @@
     "stylelint-scss": "^3.21.0"
   },
   "dependencies": {
+    "@lhci/cli": "^0.12.0",
     "live-server": "^1.1.0"
   }
 }
