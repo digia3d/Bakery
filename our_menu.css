@@ -2,11 +2,37 @@
   display: grid;
 }
 
+.product__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
 .pizzeria,
 .fast_food {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 20px;
+}
+
+.pizza h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+  text-decoration: underline;
+  padding-bottom: 5px;
+}
+
+a {
+  color: var(--text-color-light);
+}
+
+a:hover {
+  color: var(--color-lighter);
 }
 
 #pizza {
