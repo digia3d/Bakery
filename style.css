@@ -174,7 +174,6 @@ i .fa-solid::before {
   left: 0;
   max-width: 100%;
   height: 100%;
-  margin-top: 10%;
 }
 
 .pastry__text {
@@ -533,4 +532,83 @@ form button:hover {
   padding: 2px;
   margin-top: 2rem;
   color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .logo__container {
+    display: flex;
+  }
+
+  .logo {
+    display: flex;
+    max-width: 20%;
+    padding: 2rem;
+    border-radius: 30%;
+  }
+
+  .toplinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    gap: 2rem;
+    width: 100%;
+    background-color: var(--color-dark);
+  }
+
+  .toplinks a {
+    color: var(--color-lighter);
+    text-decoration: none;
+  }
+
+  .toplinks a:hover {
+    color: var(--color-light);
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+    padding-right: 7rem;
+  }
+
+  .list a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .list a:hover {
+    color: var(--color-dark);
+  }
+
+  .list li ul {
+    background-color: var(--color-dark);
+    padding-right: 5rem;
+  }
+
+  .list li ul li {
+    padding: 1rem;
+  }
+
+  .list li ul li a {
+    color: var(--color-lighter);
+    text-decoration: none;
+  }
+
+  .list li ul li a:hover {
+    color: var(--color-light);
+  }
+
+  .pastry__picture {
+    background-position: top;
+    background-size: 90%;
+    position: relative;
+    height: 150vh;
+  }
 }
