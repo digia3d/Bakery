@@ -219,7 +219,7 @@ i .fa-solid::before {
   padding-right: 2rem;
   gap: 10px;
   color: white;
-  padding-top: 0.6rem;
+  padding-top: 0.4rem;
 }
 
 .description {
@@ -649,5 +649,17 @@ form button:hover {
     grid-template-areas: "find__us__left find__us__right";
     padding: 2rem;
     margin-top: 2rem;
+  }
+
+  .find__us__desc {
+    font-size: 1.5rem;
+  }
+
+  .map__container {
+    margin-top: 15px;
+  }
+
+  .list.active .menu-closebtn {
+    display: none;
   }
 }
