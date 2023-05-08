@@ -1,3 +1,7 @@
+.our__menu {
+  background-color: var(--text-color-light);
+}
+
 .products {
   display: grid;
 }
@@ -7,8 +11,14 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
-  padding: 1rem;
+  padding: 0 2rem;
+}
+
+.product__header p {
+  font-size: 1.3rem;
+  color: var(--color-dark);
+  text-align: center;
+  font-weight: bold;
 }
 
 .pizzeria,
@@ -24,7 +34,7 @@
   margin: 0;
   text-align: center;
   text-decoration: underline;
-  padding-bottom: 5px;
+  padding: 15px;
 }
 
 a {
@@ -60,7 +70,92 @@ img {
 }
 
 h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.online__order {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-row-gap: 10px;
+}
+
+.online__order__h1 {
   font-size: 2rem;
   font-weight: 600;
   margin: 0;
+  text-align: center;
+  text-decoration: underline;
+  padding: 15px 0;
+  color: var(--color-dark);
+}
+
+.cakes1,
+.cakes2,
+.cakes3,
+.cakes4,
+.cakes5,
+.cakes6 {
+  background-color: var(--color-light);
+  background-position: center;
+  background-size: cover;
+  position: static;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.cakes1 p,
+.cakes2 p,
+.cakes3 p,
+.cakes4 p,
+.cakes5 p,
+.cakes6 p {
+  font-size: 1.3rem;
+  color: var(--color-dark);
+  text-align: center;
+  font-weight: bold;
+  background: var(--text-color-light);
+}
+
+.cakes1 {
+  background-image: url("images/pica_Prosciutto.jpg");
+  padding: 3rem;
+}
+
+.cakes2 {
+  background-image: url("images/fast__food.jpg");
+  padding: 3rem;
+}
+
+.cakes3 {
+  background-image: url("images/barbecue-3178916_1280.jpg");
+  padding: 3rem;
+}
+
+.cakes4 {
+  background-image: url("images/hleb.jpg");
+  padding: 3rem;
+}
+
+.cakes5 {
+  background-image: url("images/happy-birthday-3882913_1920.jpg");
+  padding: 2rem;
+}
+
+.cakes6 {
+  background-image: url("images/catering.jpg");
+  padding: 2rem;
+}
+
+.product__header__h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+  text-decoration: underline;
+  padding: 15px 0;
+  color: var(--color-dark);
 }
