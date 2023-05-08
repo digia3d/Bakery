@@ -174,7 +174,6 @@ i .fa-solid::before {
   left: 0;
   max-width: 100%;
   height: 100%;
-  margin-top: 10%;
 }
 
 .pastry__text {
@@ -220,7 +219,7 @@ i .fa-solid::before {
   padding-right: 2rem;
   gap: 10px;
   color: white;
-  padding-top: 0.6rem;
+  padding-top: 0.4rem;
 }
 
 .description {
@@ -533,4 +532,134 @@ form button:hover {
   padding: 2px;
   margin-top: 2rem;
   color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .logo__container {
+    display: flex;
+  }
+
+  .logo {
+    display: flex;
+    max-width: 20%;
+    padding: 2rem;
+    border-radius: 30%;
+  }
+
+  .toplinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    gap: 2rem;
+    width: 100%;
+    background-color: var(--color-dark);
+  }
+
+  .toplinks a {
+    color: var(--color-lighter);
+    text-decoration: none;
+  }
+
+  .toplinks a:hover {
+    color: var(--color-light);
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+    padding-right: 7rem;
+  }
+
+  .list a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .list a:hover {
+    color: var(--color-dark);
+  }
+
+  .list li ul {
+    background-color: var(--color-dark);
+    padding-right: 5rem;
+  }
+
+  .list li ul li {
+    padding: 1rem;
+  }
+
+  .list li ul li a {
+    color: var(--color-lighter);
+    text-decoration: none;
+  }
+
+  .list li ul li a:hover {
+    color: var(--color-light);
+  }
+
+  .pastry__picture {
+    background-position: top;
+    background-size: 90%;
+    position: relative;
+    height: 150vh;
+  }
+
+  .pastry__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Lato", sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    border-radius: 15px;
+    z-index: 2;
+    width: 70%;
+    padding: 10px;
+  }
+
+  .pastry__text h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
+
+  .pastry__text p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .find__us__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0 0;
+    grid-template-areas: "find__us__left find__us__right";
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+
+  .find__us__desc {
+    font-size: 1.5rem;
+  }
+
+  .map__container {
+    margin-top: 15px;
+  }
+
+  .list.active .menu-closebtn {
+    display: none;
+  }
 }
