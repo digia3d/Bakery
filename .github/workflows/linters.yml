@@ -21,7 +21,7 @@ jobs:
       - name: Transpile node-fetch
         run: npx babel node_modules/node-fetch --out-dir transpiled/node-fetch
       - name: Webhint Report
-        run: npx hint .
+        run: npx --node-arg=--experimental-modules hint .
   stylelint:
     name: Stylelint
     runs-on: ubuntu-22.04
