@@ -18,7 +18,9 @@
 }
 
 .pizzeria,
-.fast_food {
+.fast_food,
+.barbecue,
+.bakery {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 20px;
@@ -157,8 +159,31 @@ h3 {
 }
 
 @media only screen and (min-width: 768px) {
+  .products {
+    padding-bottom: 3rem;
+  }
+
   .online__order {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+  }
+
+  #pizza,
+  #fast_food,
+  #bakery,
+  #cakes_pastry {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px; /* Adjust the gap as needed */
+  }
+
+  .picture-container {
+    text-align: center;
+  }
+
+  .picture-container img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
   }
 }
