@@ -49,7 +49,7 @@ body {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   display: flex;
-  max-width: 50%;
+  max-width: 13%;
   padding: 2rem;
   border-radius: 30%;
 }
@@ -535,14 +535,21 @@ form button:hover {
 }
 
 @media only screen and (min-width: 768px) {
+  .logomenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-height: auto;
+  }
+
   .logo__container {
     display: flex;
   }
 
   .logo {
     display: flex;
-    max-width: 20%;
-    padding: 2rem;
+    max-width: 17%;
     border-radius: 30%;
   }
 
