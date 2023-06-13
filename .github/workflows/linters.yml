@@ -14,14 +14,15 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "18.x"
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup Webhint
         run: |
           npm install --save-dev hint@7.x
           [ -f .hintrc ] || wget https://raw.githubusercontent.com/microverseinc/linters-config/master/html-css-js/.hintrc
-      - name: Transpile node-fetch
-        run: npx babel node_modules/node-fetch --out-dir transpiled/node-fetch
       - name: Webhint Report
-        run: npx --node-options="--experimental-specifier-resolution=node" hint .
+        run: |
+          chmod +x run-webhint.js
+          ./run-webhint.js
   stylelint:
     name: Stylelint
     runs-on: ubuntu-22.04
