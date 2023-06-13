@@ -1,5 +1,6 @@
 /* global $ */
 
+document.addEventListener('DOMContentLoaded', () => {
 const mainbody = document.querySelector('.mainbody');
 const menuList = document.querySelector('.list');
 const hamburger = document.querySelector('.hamburger');
@@ -58,4 +59,5 @@ function scrollFunction() {
   }
 }
 
-window.onscroll = function () { scrollFunction(); };
+  window.onscroll = function () { scrollFunction(); };
+});

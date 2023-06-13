@@ -1,7 +1,3 @@
-.our__menu {
-  background-color: var(--text-color-light);
-}
-
 .products {
   display: grid;
 }
@@ -38,7 +34,7 @@
 }
 
 a {
-  color: var(--text-color-light);
+  color: var(--color-dark);
 }
 
 a:hover {
@@ -158,4 +154,11 @@ h3 {
   text-decoration: underline;
   padding: 15px 0;
   color: var(--color-dark);
+}
+
+@media only screen and (min-width: 768px) {
+  .online__order {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
