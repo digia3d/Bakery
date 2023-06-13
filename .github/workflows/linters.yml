@@ -18,9 +18,8 @@ jobs:
         run: |
           npm install --save-dev hint@7.x
           [ -f .hintrc ] || wget https://raw.githubusercontent.com/microverseinc/linters-config/master/html-css-js/.hintrc
-- name: Fix Webhint require issue
-  run: sed -i 's#const fetch = require("node-fetch/src/index.js");#const fetch = import("node-fetch");#' node_modules/@hint/utils-network/dist/src/request-async.js
-
+      - name: Fix Webhint require issue
+        run: sed -i 's#const fetch = require("node-fetch/src/index.js");#const fetch = import("node-fetch");#' node_modules/@hint/utils-network/dist/src/request-async.js
       - name: Webhint Report
         run: npx hint .
   stylelint:
